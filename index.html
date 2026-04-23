@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEO Initiative — Manualized Intervention for Executive Functioning & Identity-Based Self-Regulation</title>
+<meta name="description" content="The CEO Initiative is a 16-week, manualized behavioral intervention integrating executive functioning skill instruction, CBT techniques, trauma-informed delivery, and identity development theory. SBIR Phase I in preparation. Fall 2026 pilot: Lincoln Public Schools.">
+<meta property="og:title" content="CEO Initiative — Early Intervention Research Program">
+<meta property="og:description" content="Cognitive Executive Operations: A multi-component manualized intervention for executive functioning development and identity-based self-regulation in school-age youth.">
+<meta name="keywords" content="executive functioning development, early intervention behavioral health, trauma-informed youth program, MTSS Tier 2 intervention, identity-based learning, CBT-informed youth development, SBIR behavioral health">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+:root{
+  --navy:#030D1F;--navy2:#061428;--navy3:#0A1E38;
+  --blue:#0057A8;--blue2:#0068CC;--cyan:#0096CC;--cyan2:#00B8E8;--green:#007A5E;
+  --offwht:#F5F7FA;--light:#EBF1F8;--mgray:#C8D4E0;--dgray:#5A6A7E;
+  --text:#111827;--muted:#4A5568;
+  --serif:'Libre Baskerville',Georgia,serif;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+  --max:1200px
+}
+body{font-family:var(--sans);color:var(--text);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none}
+
+.skip-nav{position:absolute;top:-100px;left:1rem;z-index:999;background:var(--cyan);color:#fff;padding:.5rem 1rem;border-radius:4px;font-size:.875rem;font-weight:600}
+.skip-nav:focus{top:1rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;transition:background .3s,box-shadow .3s}
+nav.scrolled{background:rgba(3,13,31,.97);box-shadow:0 1px 0 rgba(0,150,204,.15),0 4px 24px rgba(0,0,0,.4);backdrop-filter:blur(12px)}
+.nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-wordmark{display:flex;align-items:baseline;gap:.5rem}
+.nm-ceo{font-family:var(--mono);font-size:1.05rem;font-weight:500;color:var(--cyan2);letter-spacing:.06em}
+.nm-sep{color:rgba(255,255,255,.2);font-size:.875rem}
+.nm-full{font-family:var(--sans);font-size:.8rem;font-weight:300;color:rgba(255,255,255,.55);letter-spacing:.02em}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.85rem;font-weight:400;color:rgba(255,255,255,.7);letter-spacing:.02em;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:transparent;border:1px solid rgba(0,150,204,.5);color:var(--cyan2);font-size:.8rem;font-weight:500;padding:.5rem 1.25rem;border-radius:4px;letter-spacing:.04em;transition:all .2s}
+.nav-cta:hover{background:var(--cyan);border-color:var(--cyan);color:#fff}
+
+/* BUTTONS */
+.btn-primary{background:var(--blue2);color:#fff;padding:.875rem 2rem;border-radius:4px;font-size:.9rem;font-weight:500;letter-spacing:.02em;transition:background .2s,transform .15s;display:inline-block;box-shadow:0 4px 20px rgba(0,104,204,.3)}
+.btn-primary:hover{background:var(--cyan);transform:translateY(-1px)}
+.btn-outline{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:.875rem 2rem;border-radius:4px;font-size:.9rem;font-weight:400;letter-spacing:.02em;transition:all .2s;display:inline-block}
+.btn-outline:hover{border-color:var(--cyan2);color:var(--cyan2)}
+.btn-dark{border:1px solid var(--mgray);color:var(--muted);padding:.75rem 1.75rem;border-radius:4px;font-size:.875rem;font-weight:500;transition:all .2s;display:inline-block}
+.btn-dark:hover{border-color:var(--blue2);color:var(--blue2)}
+
+/* TYPE */
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--cyan);text-transform:uppercase;margin-bottom:1rem;display:block}
+.eyebrow-dark{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--dgray);text-transform:uppercase;margin-bottom:1rem;display:block}
+.section-h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:var(--navy);line-height:1.2}
+.section-h2 em,.section-h2 span{color:var(--blue2);font-style:italic}
+.section-h2-light{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;line-height:1.2}
+.section-h2-light em{color:var(--cyan2);font-style:italic}
+.lead{font-size:1rem;color:var(--muted);line-height:1.8}
+.lead-light{font-size:1rem;color:rgba(255,255,255,.6);line-height:1.8}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 2rem}
+.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;gap:2rem;flex-wrap:wrap}
+.section-link{font-size:.85rem;font-weight:500;color:var(--blue2);letter-spacing:.02em;white-space:nowrap;border-bottom:1px solid transparent;transition:border-color .2s}
+.section-link:hover{border-color:var(--blue2)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ═══════════════ HERO ═══════════════ */
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:8rem 2rem 6rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 68% 50%,rgba(0,87,168,.2) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(0,150,204,.07) 0%,transparent 60%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:var(--max);margin:0 auto;width:100%;position:relative}
+.hero-eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:400;color:var(--cyan);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.25rem;opacity:0;animation:fadeUp .6s .1s ease forwards}
+.hero-h1{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:700;color:#fff;line-height:1.12;letter-spacing:-.02em;margin-bottom:1.5rem;opacity:0;animation:fadeUp .7s .2s ease forwards}
+.hero-h1 em{font-style:italic;color:var(--cyan2)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.6);font-weight:300;max-width:44ch;line-height:1.8;margin-bottom:2.5rem;opacity:0;animation:fadeUp .7s .35s ease forwards}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .5s ease forwards}
+.hero-meta{display:flex;gap:2rem;margin-top:3rem;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .65s ease forwards}
+.hero-stat{display:flex;flex-direction:column;gap:.25rem}
+.hs-value{font-family:var(--mono);font-size:1.1rem;font-weight:500;color:#fff}
+.hs-label{font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:.04em}
+
+/* Loop diagram */
+.hero-diagram{opacity:0;animation:fadeIn .9s .7s ease forwards;display:flex;align-items:center;justify-content:center}
+.loop-svg{width:100%;max-width:440px;margin:0 auto}
+
+/* ═══════════════ CREDENTIAL BAR ═══════════════ */
+.cred-bar{background:var(--offwht);border-top:1px solid var(--light);border-bottom:1px solid var(--light);padding:1.5rem 2rem}
+.cred-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap}
+.cred-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--dgray);text-transform:uppercase;white-space:nowrap}
+.cred-sep{width:1px;height:1.25rem;background:var(--mgray)}
+.cred-item{font-size:.8rem;color:var(--muted);white-space:nowrap;letter-spacing:.01em}
+.cred-item strong{color:var(--text);font-weight:600}
+
+/* ═══════════════ PROBLEM ═══════════════ */
+.problem{background:var(--navy2);padding:6rem 2rem}
+.problem-h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;font-weight:700;max-width:30ch;line-height:1.25;margin-bottom:3.5rem}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border:1px solid rgba(255,255,255,.06);border-radius:8px;overflow:hidden}
+.problem-card{background:rgba(255,255,255,.03);padding:2.25rem;border-right:1px solid rgba(255,255,255,.06)}
+.problem-card:last-child{border-right:none}
+.pc-num{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;color:var(--cyan);margin-bottom:1rem}
+.pc-h3{font-family:var(--serif);font-size:1.15rem;color:#fff;font-weight:700;margin-bottom:.875rem;line-height:1.3}
+.pc-body{font-size:.875rem;color:rgba(255,255,255,.5);line-height:1.8}
+
+/* ═══════════════ FRAMEWORK ═══════════════ */
+.framework{padding:6rem 2rem;background:#fff}
+.framework-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem;align-items:start}
+.framework-note{background:var(--offwht);border-left:3px solid var(--cyan);padding:1.25rem 1.5rem;border-radius:0 4px 4px 0;margin-top:1.5rem}
+.framework-note p{font-size:.875rem;color:var(--muted);line-height:1.75}
+.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.principle-card{border:1px solid var(--light);border-radius:8px;padding:1.75rem;transition:border-color .2s,box-shadow .2s}
+.principle-card:hover{border-color:var(--cyan);box-shadow:0 4px 20px rgba(0,150,204,.08)}
+.pc-icon{width:36px;height:36px;border-radius:6px;background:var(--light);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.pc-icon svg{width:18px;height:18px}
+.principle-card h3{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:.5rem}
+.principle-card p{font-size:.84rem;color:var(--muted);line-height:1.7}
+.principle-tag{display:inline-block;margin-top:.875rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--blue2);background:rgba(0,87,168,.07);padding:.25rem .6rem;border-radius:2px}
+
+/* ═══════════════ EF SKILLS ═══════════════ */
+.ef-section{background:var(--offwht);padding:5rem 2rem;border-top:1px solid var(--light);border-bottom:1px solid var(--light)}
+.ef-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:3rem}
+.ef-intro-right p{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:.875rem}
+.domain-legend{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:1.5rem}
+.domain-pill{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted)}
+.domain-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.skills-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.skill-card{background:#fff;border:1px solid var(--light);border-radius:8px;padding:1.25rem 1rem;transition:border-color .2s,transform .2s;position:relative}
+.skill-card:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.skill-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:8px 8px 0 0}
+.skill-card.sr::before{background:var(--blue2)}
+.skill-card.ef::before{background:var(--cyan)}
+.skill-card.se::before{background:var(--green)}
+.skill-num{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--dgray);margin-bottom:.5rem}
+.skill-name{font-size:.84rem;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:.375rem}
+.skill-domain{font-size:.68rem;color:var(--dgray);font-family:var(--mono)}
+
+/* ═══════════════ BEHAVIORAL LOOP ═══════════════ */
+.loop-section{padding:6rem 2rem;background:var(--navy);text-align:center}
+.loop-h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;margin-bottom:1rem}
+.loop-sub{font-size:.95rem;color:rgba(255,255,255,.55);max-width:54ch;margin:0 auto 3.5rem;line-height:1.8}
+.loop-steps{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:nowrap;overflow-x:auto;padding-bottom:.5rem}
+.loop-step{display:flex;flex-direction:column;align-items:center;min-width:120px}
+.loop-circle{width:68px;height:68px;border-radius:50%;border:1.5px solid rgba(0,150,204,.35);background:rgba(0,150,204,.07);display:flex;align-items:center;justify-content:center;margin-bottom:.875rem;transition:all .25s}
+.loop-step:hover .loop-circle{border-color:var(--cyan);background:rgba(0,150,204,.16)}
+.loop-circle svg{width:26px;height:26px}
+.loop-step-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.09em;color:rgba(255,255,255,.55);text-transform:uppercase;text-align:center;line-height:1.4}
+.loop-arrow{color:rgba(0,150,204,.35);font-size:1.1rem;padding:0 .2rem;flex-shrink:0;margin-bottom:2.4rem}
+
+/* ═══════════════ POPULATION ═══════════════ */
+.population{padding:6rem 2rem;background:#fff}
+.pop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.pop-card{border-radius:8px;overflow:hidden;border:1px solid var(--light);transition:box-shadow .25s}
+.pop-card:hover{box-shadow:0 8px 40px rgba(0,87,168,.1)}
+.pop-card-top{padding:2rem;background:var(--navy3)}
+.pop-context{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase;margin-bottom:.875rem}
+.pop-card-top h3{font-family:var(--serif);font-size:1.25rem;color:#fff;font-weight:700;margin-bottom:.75rem}
+.pop-card-top p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.75}
+.pop-card-bottom{padding:1.5rem 2rem;background:#fff}
+.pop-metrics{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.25rem}
+.pop-metric{display:flex;align-items:center;gap:.625rem;font-size:.82rem;color:var(--muted)}
+.pop-dot{width:5px;height:5px;border-radius:50%;background:var(--cyan);flex-shrink:0}
+.pop-link{font-size:.82rem;font-weight:500;color:var(--blue2);display:inline-flex;align-items:center;gap:.375rem;border-bottom:1px solid transparent;transition:border-color .2s}
+.pop-link:hover{border-color:var(--blue2)}
+
+/* ═══════════════ OUTCOMES ═══════════════ */
+.outcomes{padding:5rem 2rem;background:var(--light);border-top:1px solid var(--mgray)}
+.outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.outcome-card{background:#fff;border-radius:8px;border:1px solid var(--mgray);padding:1.5rem;text-align:center;transition:box-shadow .2s}
+.outcome-card:hover{box-shadow:0 4px 16px rgba(0,87,168,.1)}
+.oc-pct{font-family:var(--mono);font-size:2rem;font-weight:500;color:var(--blue2);line-height:1;margin-bottom:.5rem}
+.oc-label{font-size:.9rem;color:var(--muted);line-height:1.5;margin-bottom:.75rem;  max-width: 28ch;margin-left: auto;margin-right: auto;}
+.oc-domain{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--dgray);text-transform:uppercase}
+
+/* ═══════════════ PROCESS STRIP ═══════════════ */
+.process-strip{padding:6rem 2rem;background:var(--navy2);border-top:1px solid rgba(255,255,255,.06)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+.phase-tile{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:1.75rem;transition:background .2s,border-color .2s}
+.phase-tile:hover{background:rgba(255,255,255,.07);border-color:rgba(0,150,204,.2)}
+.pt-phase{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;color:var(--cyan);text-transform:uppercase;margin-bottom:.625rem}
+.pt-name{font-family:var(--serif);font-size:1.1rem;color:#fff;font-weight:700;margin-bottom:.5rem}
+.pt-weeks{font-family:var(--mono);font-size:.62rem;color:rgba(255,255,255,.35);margin-bottom:.875rem}
+.pt-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.7}
+
+/* ═══════════════ GRANT STRIP ═══════════════ */
+.grant-strip{padding:5rem 2rem;background:var(--navy3);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.grant-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.grant-content p{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:.875rem}
+.grant-content a{color:var(--cyan2);border-bottom:1px solid rgba(0,184,232,.3);transition:border-color .2s}
+.grant-content a:hover{border-color:var(--cyan2)}
+.grant-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gm-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:1.25rem;text-align:center}
+.gm-value{font-family:var(--mono);font-size:1.4rem;font-weight:500;color:#fff;margin-bottom:.375rem}
+.gm-label{font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.4}
+
+a[href$=".html"] {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+/* ═══════════════ CTA ═══════════════ */
+.cta-section{padding:7rem 2rem;background:var(--navy2);text-align:center}
+.cta-inner{max-width:640px;margin:0 auto}
+.cta-h2{font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.6rem);color:#fff;font-weight:700;line-height:1.2;margin-bottom:1.25rem}
+.cta-sub{font-size:1rem;color:rgba(255,255,255,.55);margin-bottom:2.5rem;line-height:1.8;max-width:48ch;margin-left:auto;margin-right:auto}
+
+/* FOOTER */
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:4rem 2rem 2.5rem}
+.footer-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.footer-brand p{font-size:.85rem;color:rgba(255,255,255,.4);max-width:34ch;line-height:1.75;margin:.875rem 0 1.5rem}
+.footer-cred{font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.3);letter-spacing:.06em;line-height:1.9}
+.footer-col h4{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.625rem}
+.footer-col a{font-size:.85rem;color:rgba(255,255,255,.4);transition:color .2s}
+.footer-col a:hover{color:rgba(255,255,255,.85)}
+.footer-bottom{max-width:var(--max);margin:3rem auto 0;border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.footer-bottom span{font-size:.75rem;color:rgba(255,255,255,.3)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-diagram{display:none}
+  .problem-grid{grid-template-columns:1fr}
+  .problem-card{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
+  .framework-intro{grid-template-columns:1fr}
+  .principles-grid{grid-template-columns:repeat(2,1fr)}
+  .ef-intro{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .pop-grid{grid-template-columns:1fr}
+  .outcomes-grid{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+  .grant-inner{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .principles-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .cred-inner{gap:1.25rem}
+  .cred-sep{display:none}
+  .loop-circle{width:54px;height:54px}
+}
+</style>
+</head>
+<body>
+
+grid templates column"#main" class="skip-nav">Skip to main content</a>
+
+<nav id="nav" role="navigation" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <div class="nav-wordmark" aria-label="CEO Initiative">
+  <span class="nm-ceo">CEO</span>
+  <span class="nm-sep">/</span>
+  <span class="nm-full">Cognitive Executive Operations</span>
+</div>
+    <ul class="nav-links" role="list">
+      <li><span class="nav-link">Framework</span></li>
+<li><span class="nav-link">Application</span></li>
+<li><span class="nav-link">Process</span></li>
+<li><span class="nav-link">Research</span></li>
+<li><span class="nav-link">About</span></li>
+    </ul>
+    <div class="nav-cta">Request Information</div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="hero-grid">
+    <div>
+      <p class="hero-eyebrow">Cognitive Executive Operations — Manualized Early Intervention Program</p>
+      <h1 class="hero-h1" id="hero-h1">
+        A 16-week manualized intervention<br>targeting executive functioning deficits<br>and <em>identity-based self-regulation</em><br>in school-age youth.
+      </h1>
+      <p class="hero-sub"><p class="hero-sub"> The CEO Initiative delivers a 16-week, manualized intervention designed to produce measurable improvements in executive functioning and behavioral outcomes in school-age youth. The model integrates ten discrete EF skill domains, a fixed six-component session architecture, and three standardized assessment instruments. Outcomes are pre-specified and evaluated against defined improvement thresholds across a single program cycle. Fall 2026 pilot: Lincoln Public Schools. SBIR Phase I submissions in preparation.</p>
+      <div class="hero-actions">
+        grid templates column"framework.html" class="btn-primary">Explore the Framework</a>
+        grid templates column"application.html" class="btn-outline">Application Contexts</a>
+      </div>
+      <div class="hero-meta" aria-label="Program facts">
+        <div class="hero-stat"><div class="hs-value">16 Weeks</div><div class="hs-label">Manualized · Fixed Session Architecture</div></div>
+        <div class="hero-stat"><div class="hs-value">10 EF Skills</div><div class="hs-label">Discrete Domains · BRIEF-2 Mapped</div></div>
+        <div class="hero-stat"><div class="hs-value">3 Instruments</div><div class="hs-label">BRIEF-2 · Ohio Youth Scales · CEO EF Tracker</div></div>
+        <div class="hero-stat"><div class="hs-value">SBIR Phase I</div><div class="hs-label">ED/IES Primary · NIH NICHD/NIMH Secondary</div></div>
+      </div>
+    </div>
+    <div class="hero-diagram" aria-hidden="true">
+      <svg class="loop-svg" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="220" cy="220" r="175" stroke="rgba(0,150,204,.06)" stroke-width="1"/>
+        <circle cx="220" cy="220" r="125" stroke="rgba(0,150,204,.04)" stroke-width="1"/>
+        <!-- Node: TRIGGER top -->
+        <circle cx="220" cy="55" r="36" fill="rgba(0,150,204,.1)" stroke="rgba(0,150,204,.45)" stroke-width="1.5"/>
+        <text x="220" y="51" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="rgba(0,184,232,.9)" letter-spacing="1">TRIGGER</text>
+        <text x="220" y="64" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="rgba(255,255,255,.35)">01</text>
+        <!-- Node: ACTION top-right -->
+        <circle cx="366" cy="143" r="36" fill="rgba(0,150,204,.1)" stroke="rgba(0,150,204,.45)" stroke-width="1.5"/>
+        <text x="366" y="139" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="rgba(0,184,232,.9)" letter-spacing="1">ACTION</text>
+        <text x="366" y="152" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="rgba(255,255,255,.35)">02</text>
+        <!-- Node: REFLECT bottom-right -->
+        <circle cx="366" cy="297" r="36" fill="rgba(0,150,204,.1)" stroke="rgba(0,150,204,.45)" stroke-width="1.5"/>
+        <text x="366" y="292" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="rgba(0,184,232,.9)" letter-spacing="1">REFLECT</text>
+        <text x="366" y="305" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="rgba(255,255,255,.35)">03</text>
+        <!-- Node: FEEDBACK bottom -->
+        <circle cx="220" cy="385" r="36" fill="rgba(0,150,204,.1)" stroke="rgba(0,150,204,.45)" stroke-width="1.5"/>
+        <text x="220" y="380" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(0,184,232,.9)" letter-spacing="1">FEEDBACK</text>
+        <text x="220" y="393" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="rgba(255,255,255,.35)">04</text>
+        <!-- Node: IDENTITY bottom-left (highlighted) -->
+        <circle cx="74" cy="297" r="36" fill="rgba(0,184,232,.16)" stroke="rgba(0,184,232,.65)" stroke-width="1.5"/>
+        <text x="74" y="291" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(0,184,232,1)" letter-spacing="1">IDENTITY</text>
+        <text x="74" y="302" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(0,184,232,1)" letter-spacing="1">SHIFT</text>
+        <text x="74" y="314" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="rgba(255,255,255,.35)">05</text>
+        <!-- Node: REPEAT top-left -->
+        <circle cx="74" cy="143" r="36" fill="rgba(0,150,204,.1)" stroke="rgba(0,150,204,.45)" stroke-width="1.5"/>
+        <text x="74" y="139" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="rgba(0,184,232,.9)" letter-spacing="1">REPEAT</text>
+        <text x="74" y="152" text-anchor="middle" font-family="IBM Plex Mono" font-size="6.5" fill="rgba(255,255,255,.35)">06</text>
+        <!-- Connectors -->
+        <path d="M248 69 Q320 90 348 120" stroke="rgba(0,150,204,.25)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+        <path d="M366 179 L366 261" stroke="rgba(0,150,204,.25)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+        <path d="M344 318 Q290 365 252 378" stroke="rgba(0,150,204,.25)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+        <path d="M188 378 Q150 366 98 320" stroke="rgba(0,150,204,.25)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+        <path d="M74 261 L74 179" stroke="rgba(0,150,204,.25)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+        <path d="M98 120 Q150 88 194 68" stroke="rgba(0,150,204,.25)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+        <!-- Center -->
+        <text x="220" y="213" text-anchor="middle" font-family="Libre Baskerville" font-size="13" fill="rgba(255,255,255,.75)" font-style="italic">The Business</text>
+        <text x="220" y="232" text-anchor="middle" font-family="Libre Baskerville" font-size="13" fill="rgba(255,255,255,.75)" font-style="italic">of Me</text>
+        <defs>
+          <marker id="a" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M1 1L7 4L1 7" fill="none" stroke="rgba(0,150,204,.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CREDENTIAL BAR ═══════════════ -->
+<div class="cred-bar" role="complementary" aria-label="Affiliations and partnerships">
+  <div class="cred-inner">
+    <span class="cred-label">Program Context</span>
+    <div class="cred-sep" aria-hidden="true"></div>
+    <span class="cred-item"><strong><span class="cred-item">LPS — Confirmed Fall 2026 Pilot Implementation</span>
+    <div class="cred-sep" aria-hidden="true"></div>
+    <span class="cred-item"><strong><span class="cred-item">ED/IES + NIH (NICHD/NIMH) — SBIR Phase I Submission in Preparation</span>
+    <div class="cred-sep" aria-hidden="true"></div>
+    <span class="cred-item"><strong><span class="cred-item">MTSS Tier 2 / Tier 3 — Deployment-Ready Intervention Model</span>
+    <div class="cred-sep" aria-hidden="true"></div>
+    <span class="cred-item"><strong>Malone Center · Diversion — Active Implementation Partners</span>
+    <div class="cred-sep" aria-hidden="true"></div>
+    <span class="cred-item"><strong>Lawrence Gardiner, MA, LIMHP — Principal Investigator and Program Developer</span>
+  </div>
+</div>
+
+<!-- ═══════════════ PROBLEM ═══════════════ -->
+<section class="problem reveal" aria-labelledby="prob-h2">
+  <div class="container">
+    <span class="eyebrow">Empirical Context</span>
+    <h2 class="problem-h2" id="prob-h2">Executive functioning deficits in school-age youth are not a discipline problem. They are a neurodevelopmental intervention target.</h2>
+    <div class="problem-grid" role="list">
+      <div class="problem-card" role="listitem">
+        <div class="pc-num">01 / PRESENTING GAP</div>
+        <h3 class="pc-h3">Executive-function difficulties are well documented in school-age youth and are associated with meaningful challenges in academic and behavioral functioning. Existing school-based responses do not always target these difficulties as discrete, teachable skill domains.</h3>
+        <p class="pc-body">Research on executive function consistently identifies inhibitory control, working memory, and cognitive flexibility as important components of goal-directed behavior. These processes are relevant to school performance and behavioral regulation, and they are responsive to targeted intervention in at least some child and adolescent populations. The CEO Initiative is designed around that literature but does not claim to replace the broader evidence base on school behavior or juvenile justice involvement. These are not attitudinal deficits. They are domain-specific neurocognitive skill deficits that respond to targeted instruction. Standard behavioral consequence systems do not address them. Despite this established evidence, few school-based interventions systematically target these deficits using a structured, repeatable behavioral model with integrated identity development and defined outcome measurement.</p>
+      </div>
+      <div class="problem-card" role="listitem">
+        <div class="pc-num">02 / STRUCTURAL ABSENCE</div>
+        <h3 class="pc-h3">Self-concept and identity processes are plausibly relevant to whether practiced skills generalize beyond structured intervention settings, but this relationship is better framed as a theoretical rationale than as a settled empirical conclusion.</h3>
+        <p class="pc-body">Behavioral gains made in structured settings do not always transfer cleanly into naturalistic environments. The CEO Initiative addresses that challenge by explicitly linking skill practice to self-reflection, self-monitoring, and repeated behavioral rehearsal. In this model, identity development is treated as a program hypothesis and design feature, not as a universally established mechanism of change. This generalization failure is the primary reason short-term behavioral gains in youth interventions do not sustain across contexts or over time. The theoretical gap is not in the skill training literature — it is in the failure to address the identity variable that determines whether trained skills become behavioral defaults. No widely-disseminated school-based EF intervention currently incorporates a specified identity development component with its own measurement system.</p>
+      </div>
+      <div class="problem-card" role="listitem">
+        <div class="pc-num">03 / CEO INITIATIVE RESPONSE</div>
+        <h3 class="pc-h3">Behavioral gains made in structured settings do not always transfer cleanly into naturalistic environments. The CEO Initiative addresses that challenge by explicitly linking skill practice to self-reflection, self-monitoring, and repeated behavioral rehearsal. In this model, identity development is treated as a program hypothesis and design feature, not as a universally established mechanism of change.</h3>
+        <p class="pc-body">Every session delivers EF skill instruction within a fixed six-component sequence — Trigger Identification → Deliberate Action → Structured Reflection → Targeted Feedback → Identity Shift → Generalization Practice — that systematically links skill practice to self-concept development. Each component has a specified clinical function, a defined time allocation, and a facilitation protocol grounded in CBT and trauma-informed care principles. Identity shift is operationally defined as a measurable change in student self-report data and practitioner-rated EF composites across the 16-week program cycle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FRAMEWORK ═══════════════ -->
+<section class="framework reveal" aria-labelledby="fw-h2">
+  <div class="container">
+    <div class="framework-intro">
+      <div>
+        <span class="eyebrow-dark">Theoretical Architecture</span>
+        <h2 class="section-h2" id="fw-h2">Six Principles. Not constructs — <em>operationalized behavioral domains.</em></h2>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.8;margin-top:1rem;max-width:44ch">The Six CEO Principles are not aspirational values. They are operationalized behavioral domains, each defined by observable, measurable behavioral indicators and mapped to specific executive functioning subscales in the BRIEF-2 assessment taxonomy. Each principle functions as an identity-level organizing construct: students do not comply with the principles — they develop them as stable features of self-description through repeated, structured behavioral practice over the 16-week program arc. This distinction — between externally imposed behavioral norms and internally organized identity constructs — is the core theoretical contribution of the CEO Initiative and the mechanism through which the program addresses the generalization failure described in the behavioral intervention literature.</p>
+        <span class="fake-link">...</span>
+      </div>
+      <div>
+        <div class="framework-note">
+          <p><strong>Theoretical mapping:</strong> Theoretical mapping: Each principle is aligned with one or more executive-function domains commonly discussed in the executive-function literature, one or more self-concept themes drawn from developmental self research, and one or more BRIEF2 scales used in the program’s assessment battery. These mappings are part of the CEO Initiative’s internal model and should be presented as design alignments rather than direct one-to-one claims from the cited sources.</p>
+        </div>
+        <div style="margin-top:1.5rem;padding:1.5rem;background:var(--offwht);border:1px solid var(--light);border-radius:8px">
+          <div style="font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;color:var(--dgray);text-transform:uppercase;margin-bottom:.875rem">Three Identity Pillars</div>
+          <div style="display:flex;flex-direction:column;gap:.625rem">
+            <div style="font-size:.85rem;color:var(--text);display:flex;align-items:center;gap:.75rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--cyan)">01</span>Clarity &amp; Momentum — Inhibitory control, initiation, sustained attention, task completion</div>
+            <div style="font-size:.85rem;color:var(--text);display:flex;align-items:center;gap:.75rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--cyan)">02</span>Presence &amp; Control — Emotional regulation, recovery, cognitive flexibility, self-monitoring</div>
+            <div style="font-size:.85rem;color:var(--text);display:flex;align-items:center;gap:.75rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--cyan)">03</span>Vision &amp; Influence — Goal-directed behavior, planning, social awareness, community orientation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="principles-grid" data-stagger>
+      <div class="principle-card">
+        <div class="pc-icon" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="var(--blue2)" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="var(--blue2)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Discipline</h3>
+        <p>Consistent behavioral output independent of affective state. Operationally: the student initiates and completes tasks without external prompting, in the presence of competing stimuli or negative affect. Mapped to BRIEF-2 Inhibit and Initiate subscales.</p>
+        <span class="principle-tag">BRIEF-2: Inhibit / Initiate</span>
+      </div>
+      <div class="principle-card">
+        <div class="pc-icon" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none"><path d="M9 2L3 7v9h12V7L9 2z" stroke="var(--blue2)" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h3>Resilience</h3>
+        <p>Functional recovery from disruptive events without identity destabilization. Operationally: re-engagement with structured tasks within a defined window following an adverse behavioral event, without facilitator re-escalation. Mapped to BRIEF-2 Emotional Control and Shift subscales.</p>
+        <span class="principle-tag">BRIEF-2: Emotional Control / Shift</span>
+      </div>
+      <div class="principle-card">
+        <div class="pc-icon" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none"><path d="M5 9h8M9 5v8" stroke="var(--blue2)" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="9" r="7" stroke="var(--blue2)" stroke-width="1.5"/></svg></div>
+        <h3>Ingenuity</h3>
+        <p>Generative problem-solving in the presence of obstacle or failure. Operationally: produces at least one functionally distinct alternative approach when an initial strategy fails, framing the obstacle as information rather than dispositional attribution. Mapped to BRIEF-2 Plan/Organize and Shift.</p>
+        <span class="principle-tag">BRIEF-2: Plan/Organize / Shift</span>
+      </div>
+      <div class="principle-card">
+        <div class="pc-icon" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none"><path d="M6 9a3 3 0 106 0 3 3 0 00-6 0z" stroke="var(--blue2)" stroke-width="1.5"/><path d="M2 9h2M14 9h2M9 2v2M9 14v2" stroke="var(--blue2)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Citizenship</h3>
+        <p>Socially embedded behavioral accountability. Operationally: demonstrates perspective-taking, considers systemic consequences of individual behavior, and voluntarily accepts accountability for shared outcomes without external prompting. Mapped to Ohio Youth Scales Social Functioning domain.</p>
+        <span class="principle-tag">OYS: Social Functioning</span>
+      </div>
+      <div class="principle-card">
+        <div class="pc-icon" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none"><path d="M9 3C6 3 3 5 3 8c0 4 6 7 6 7s6-3 6-7c0-3-3-5-6-5z" stroke="var(--blue2)" stroke-width="1.5"/></svg></div>
+        <h3>Self-Love</h3>
+        <p>Emotionally regulated self-appraisal anchored in stable self-worth. Operationally: tolerates corrective feedback, acknowledges behavioral failure, and re-engages without dysregulated affect or withdrawal. Trauma-informed framing. Mapped to Ohio Youth Scales Functioning and Hopefulness domains.</p>
+        <span class="principle-tag">OYS: Functioning / Hopefulness</span>
+      </div>
+      <div class="principle-card">
+        <div class="pc-icon" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none"><circle cx="6" cy="6" r="3" stroke="var(--blue2)" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="var(--blue2)" stroke-width="1.5"/><path d="M9 9l.5.5" stroke="var(--blue2)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Collectiveness</h3>
+        <p>Identity formation through structured community participation. Operationally: actively contributes to cohort functioning, demonstrates accountability to group norms, and articulates individual development in terms of collective membership. Mapped to Ohio Youth Scales Social Functioning and program cohesion ratings.</p>
+        <span class="principle-tag">OYS: Social Functioning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EF SKILLS ═══════════════ -->
+<section class="ef-section reveal" aria-labelledby="ef-h2">
+  <div class="container">
+    <div class="ef-intro">
+      <div>
+        <span class="eyebrow-dark">The 10-Skill Taxonomy</span>
+        <h2 class="section-h2" id="ef-h2">Executive functioning<br>is <em>the modifiable variable.</em></h2>
+      </div>
+      <div class="ef-intro-right">
+        <p>The CEO Initiative’s 10-skill taxonomy is informed by the executive-function literature and organized to support intervention delivery, progress monitoring, and practical use in school and community settings. BRIEF2 provides an assessment framework that overlaps with several of these domains, but the CEO taxonomy itself is a program-specific organizational model rather than a direct replication of any single published framework. Skills are organized into three domains: Self-Regulation (inhibitory control, emotional regulation, recovery), EF Learning (initiation, attention, completion, planning, flexibility), and Social Executive (goal direction, social awareness). Each skill is discretely defined, associated with one or more standardized subscales, and tracked weekly using the CEO Executive Function Tracking Sheet 2.0.</p>
+        <p>Skills are not delivered as content — they are practiced in structured behavioral context, reflectively processed, and measured longitudinally across the program cycle.</p>
+        <div class="domain-legend">
+          <div class="domain-pill"><div class="domain-dot" style="background:var(--blue2)"></div>Self-Regulation (SR)</div>
+          <div class="domain-pill"><div class="domain-dot" style="background:var(--cyan)"></div>EF Learning (EF)</div>
+        </div>
+      </div>
+    </div>
+    <div class="skills-grid" data-stagger>
+      <div class="skill-card sr"><div class="skill-num">01 / SR</div><div class="skill-name">Task Initiation</div><div class="skill-domain" style="color:var(--cyan)">EF Learning</div></div>
+      <div class="skill-card sr"><div class="skill-num">02 / SR</div><div class="skill-name">Impulse Control</div><div class="skill-domain" style="color:var(--blue2)">Self-Regulation</div></div>
+      <div class="skill-card sr"><div class="skill-num">03 / SR</div><div class="skill-name">Focus &amp; Recovery</div><div class="skill-domain" style="color:var(--cyan)">EF Learning</div></div>
+      <div class="skill-card ef"><div class="skill-num">04 / EF</div><div class="skill-name">Time Management</div><div class="skill-domain" style="color:var(--cyan)">EF Learning</div></div>
+      <div class="skill-card ef"><div class="skill-num">05 / EF</div><div class="skill-name">Working Memory &amp; Attention</div><div class="skill-domain" style="color:var(--cyan)">EF Learning</div></div>
+      <div class="skill-card ef"><div class="skill-num">06 / EF</div><div class="skill-name">Cognitive Flexibility</div><div class="skill-domain" style="color:var(--cyan)">EF Learning</div></div>
+      <div class="skill-card ef"><div class="skill-num">07 / EF</div><div class="skill-name">Self-Regulation</div><div class="skill-domain" style="color:var(--cyan)">EF Learning</div></div>
+      <div class="skill-card ef"><div class="skill-num">08 / EF</div><div class="skill-name">Emotional Self Control</div><div class="skill-domain" style="color:var(--blue2)">Self-Regulation</div></div>
+      <div class="skill-card se"><div class="skill-num">09 / SE</div><div class="skill-name">Task Completion</div><div class="skill-domain" style="color:var(--blue2)">Self-Regulation</div></div>
+      <div class="skill-card se"><div class="skill-num">10 / SE</div><div class="skill-name">Organization</div><div class="skill-domain" style="color:var(--blue2)">Self-Regulation</div></div>
+    </div>
+    <div class="center-link">
+      <span class="fake-link">
+        Full Framework Documentation →
+    </span>
+  </div>
+  </section>
+
+<!-- ═══════════════ BEHAVIORAL LOOP ═══════════════ -->
+<section class="loop-section reveal" aria-labelledby="loop-h2">
+  <div class="container">
+    <span class="eyebrow">Intervention Architecture</span>
+    <h2 class="loop-h2" id="loop-h2">Every session instantiates a closed behavioral loop.</h2>
+    <p class="loop-sub">The loop architecture is informed by CBT principles and adapted for manualized group delivery in non-clinical and school-adjacent settings. In the CEO Initiative, each component is assigned a specific program function, including metacognitive awareness, behavioral rehearsal, reflection, feedback, and generalization practice. This should be described as a model adaptation rather than as a direct quotation of standard CBT protocol.</p>
+    <div class="loop-steps" role="list" aria-label="Behavioral loop steps">
+      <div class="loop-step" role="listitem">
+        <div class="loop-circle" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="rgba(0,184,232,.65)" stroke-width="1.5"/><path d="M14 9v5l3 3" stroke="rgba(0,184,232,.65)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="loop-step-label">Trigger<br>Identified</div>
+      </div>
+      <div class="loop-arrow" aria-hidden="true">→</div>
+      <div class="loop-step" role="listitem">
+        <div class="loop-circle" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M8 14l4 4 8-8" stroke="rgba(0,184,232,.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="loop-step-label">Deliberate<br>Action</div>
+      </div>
+      <div class="loop-arrow" aria-hidden="true">→</div>
+      <div class="loop-step" role="listitem">
+        <div class="loop-circle" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M9 14a5 5 0 0110 0" stroke="rgba(0,184,232,.65)" stroke-width="1.5" stroke-linecap="round"/><path d="M14 19v-5" stroke="rgba(0,184,232,.65)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="loop-step-label">Structured<br>Reflection</div>
+      </div>
+      <div class="loop-arrow" aria-hidden="true">→</div>
+      <div class="loop-step" role="listitem">
+        <div class="loop-circle" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M7 14h14M14 7l7 7-7 7" stroke="rgba(0,184,232,.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="loop-step-label">Targeted<br>Feedback</div>
+      </div>
+      <div class="loop-arrow" aria-hidden="true">→</div>
+      <div class="loop-step" role="listitem">
+        <div class="loop-circle" aria-hidden="true" style="border-color:rgba(0,184,232,.7);background:rgba(0,184,232,.14)"><svg viewBox="0 0 28 28" fill="none"><path d="M9 14a5 5 0 0010 0" stroke="rgba(0,184,232,.9)" stroke-width="1.5" stroke-linecap="round"/><path d="M14 9l2 2-2 2" stroke="rgba(0,184,232,.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="loop-step-label" style="color:rgba(0,184,232,.8)">Identity<br>Shift</div>
+      </div>
+      <div class="loop-arrow" aria-hidden="true">→</div>
+      <div class="loop-step" role="listitem">
+        <div class="loop-circle" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M20 12a6 6 0 11-6-6" stroke="rgba(0,184,232,.65)" stroke-width="1.5" stroke-linecap="round"/><path d="M20 7v5h-5" stroke="rgba(0,184,232,.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="loop-step-label">Repeat &amp;<br>Generalize</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ POPULATION ═══════════════ -->
+<section class="population reveal" aria-labelledby="pop-h2">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow-dark">Implementation Contexts</span>
+        <h2 class="section-h2" id="pop-h2">Three deployment environments.<br><em>One manualized model.</em></h2>
+      </div>
+     <span class="fake-link">...</span>
+    </div>
+    <p class="lead" style="max-width:62ch;margin-bottom:3rem">The theoretical framework, session structure, assessment battery, and facilitation protocols are held constant across implementation contexts. Adaptation occurs at the level of scheduling, referral pathway, and facilitator institutional role — not at the level of model fidelity. This distinction is the basis for the program's claim to transportability without theoretical dilution.</p>
+    <div class="pop-grid" data-stagger>
+      <article class="pop-card">
+        <div class="pop-card-top">
+          <div class="pop-context">K–12 Schools — MTSS Tier 2 / Tier 3</div>
+          <h3>School-Based Implementation</h3>
+          <p>Delivered within existing MTSS infrastructure as a Tier 2 small-group intervention (cohort: 8–15 students) or Tier 3 individualized support via the CEO Lite track. Assessment battery integrates with school-based behavioral data systems. The Educator Resource Library provides common language and behavioral cue protocols for non-program staff, addressing the cross-setting consistency requirement identified in the EF generalization literature.</p>
+        </div>
+        <div class="pop-card-bottom">
+          <ul class="pop-metrics">
+            <li class="pop-metric"><div class="pop-dot" aria-hidden="true"></div>MTSS Tier 2 small group + Tier 3 CEO Lite track</li>
+            <li class="pop-metric"><div class="pop-dot" aria-hidden="true"></div>Educator Resource Library — cross-setting consistency</li>
+            <li class="pop-metric"><div class="pop-dot" aria-hidden="true"></div>Weekly CEO EF Tracking Sheet 2.0 monitoring</li>
+            <li class="pop-metric"><div class="pop-dot" aria-hidden="true"></div>Parent tracking component — home generalization</li>
+          </ul>
+          <span class="fake-link">School Implementation Model →</span>
+        </div>
+      </article>
+      <article class="pop-card">
+        <div class="pop-card-top">
+  <div class="pop-context">Community — Diversion / Youth-Serving Organizations</div>
+  <h3>Community-Based Implementation</h3>
+
+  <p>
+    Operates without school enrollment dependency. Appropriate for court-involved youth in diversion or probation contexts where documented structured intervention with measurable outcomes is required by court oversight frameworks. The CEO EF Tracking Sheet 2.0 produces a weekly behavioral data record that satisfies diversion documentation requirements without relying on disciplinary or incarceration-adjacent measurement frameworks.
+  </p>
+
+  <p class="pop-bridge">
+    Structured for diversion systems requiring documented behavioral progress without school dependency.
+  </p>
+</div>
+        <div class="pop-card-bottom">
+<div class="center-link">
+  <span class="fake-link">View Community Application Model → →</span>
+</div>
+        </div>
+      </article>
+      <article class="pop-card">
+        <div class="pop-card-top">
+          <div class="pop-context">Clinical Settings — Adjunct Delivery</div>
+          <h3>Clinical Integration</h3>
+          <p>Supplements individual and group therapy with structured EF skill-building. Compatible with CBT protocols, trauma-focused treatment, and IEP-adjacent therapeutic goals. Appropriate as an adjunct for youth with documented EF deficits, behavioral presentations consistent with ADHD or conduct-spectrum concerns, or trauma histories that have disrupted development of self-regulatory capacity.</p>
+        </div>
+        <div class="pop-card-bottom">
+          <ul class="pop-metrics">
+            <li class="pop-metric"><div class="pop-dot" aria-hidden="true"></div>CBT and trauma-focused protocol compatible</li>
+            <li class="pop-metric"><div class="pop-dot" aria-hidden="true"></div>IEP goal alignment support</li>
+            <li class="pop-metric"><div class="pop-dot" aria-hidden="true"></div>Assessment instruments: clinical documentation standard</li>
+            <li class="pop-metric"><div class="pop-dot" aria-hidden="true"></div>Adjunct to individual or group therapy</li>
+          </ul>
+        <span class="fake-link">Clinical Inquiry →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ OUTCOMES ═══════════════ -->
+<section class="outcomes reveal" aria-labelledby="outcomes-h2">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow-dark">Pilot Evaluation Targets</span>
+        <h2 class="section-h2" id="outcomes-h2">Seven outcome domains.<br><em>Pre-specified thresholds. Multi-instrument measurement.</em></h2>
+      </div>
+      <span class="fake-link">Evidence Base →</span>
+    </div>
+    <p class="lead" style="max-width:64ch;margin-bottom:2.5rem">The domains below represent pre-specified pilot evaluation targets, not outcome claims. Each target is tied to a named assessment source and a defined evaluation window. These targets will guide pilot interpretation and determine whether the model demonstrates sufficient signal for further study, refinement, and subsequent controlled evaluation.</p>
+    <div class="outcomes-grid" data-stagger>
+      <div class="outcomes-grid" data-stagger>
+
+  <div class="outcome-card">
+    <div class="oc-pct">Goal Attainment</div>
+    <div class="oc-label">
+      Documented attainment of at least one individualized SMART goal within the Personalized Mission Map by the end of the intervention cycle.
+    </div>
+  </div>
+
+  <div class="outcome-card">
+    <div class="oc-pct">Emotional Regulation </div>
+    <div class="oc-label">
+      Reduction in youth-reported emotional and behavioral distress using the Ohio Youth Scales Problem Severity subscale, with mid-point review for trajectory monitoring.
+    </div>
+  </div>
+
+  <div class="outcome-card">
+    <div class="oc-pct">Cognitive Flexibility </div>
+    <div class="oc-label">
+      Measurable improvement in practitioner-rated cognitive flexibility and applied problem-solving using the CEO EF Tracker and behavioral observation.
+    </div>
+  </div>
+
+  <div class="outcome-card">
+    <div class="oc-pct">Executive Organization </div>
+    <div class="oc-label">
+      Improvement in organization and time management using the BRIEF-2 Plan/Organize subscale, educator-rated form.
+    </div>
+  </div>
+
+  <div class="outcome-card">
+    <div class="oc-pct">Attention & Working Memory </div>
+    <div class="oc-label">
+      Improvement in sustained attention and working memory using the BRIEF-2 Working Memory subscale, educator-rated form.
+    </div>
+  </div>
+
+  <div class="outcome-card">
+    <div class="oc-pct">School Engagement </div>
+    <div class="oc-label">
+      Measurable reduction in behavioral incident frequency (administrator-reported), improvement in attendance rate (school records), and reduction in missing assignment rate (teacher-reported).
+    </div>
+  </div>
+<div style="max-width:64ch; margin: 1.5rem auto 0;">
+  <p class="site-note">
+    This site presents a structured overview of the CEO Initiative model. Full documentation and implementation materials available upon request.
+  </p>
+</section>
+
+<!-- ═══════════════ PROGRAM PROCESS ═══════════════ -->
+<section class="process-strip reveal" aria-labelledby="process-h2">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">Program Structure</span>
+        <h2 class="section-h2-light" id="process-h2">Four phases. <em>Manualized delivery. Fixed session architecture.</em></h2>
+      </div>
+      grid templates column"process.html" style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.5);white-space:nowrap;border-bottom:1px solid transparent;transition:all .2s" onmouseover="this.style.color='var(--cyan2)';this.style.borderColor='rgba(0,184,232,.3)'" onmouseout="this.style.color='rgba(255,255,255,.5)';this.style.borderColor='transparent'">Full Process Model →</a>
+    </div>
+    <div class="process-grid" data-stagger>
+      <div class="phase-tile">
+        <div class="pt-phase">Phase One</div>
+        <div class="pt-name">Assessment</div>
+        <div class="pt-weeks">Weeks 1–2</div>
+        <div class="pt-desc">Full psychometric baseline established. BRIEF-2 distributed to educator and parent informants. Ohio Youth Scales administered in parallel youth, parent, and worker forms. CEO EF Tracking Sheet 2.0 baseline completed. Personalized Mission Maps developed from assessment data. CEO Pledge for Change executed — grounded in Oettingen's (2014) implementation intention framework.</div>
+      </div>
+      <div class="phase-tile">
+        <div class="pt-phase">Phase Two</div>
+        <div class="pt-name">Skill-Building</div>
+        <div class="pt-weeks">Weeks 3–10</div>
+        <div class="pt-desc">Six structured EF workshops in fixed sequence: Planning &amp; Organization, Attention &amp; Focus, Time Management, Decision-Making Under Uncertainty, Organization Systems, Focus Under Pressure. Each follows a CBT-informed structure: psychoeducation → skill demonstration → behavioral rehearsal → reflection. Weekly CEO EF Tracker administered. Pillar progress scores updated and returned as quantitative identity development data.</div>
+      </div>
+      <div class="phase-tile">
+        <div class="pt-phase">Phase Three</div>
+        <div class="pt-name">Application</div>
+        <div class="pt-weeks">Weeks 11–14</div>
+        <div class="pt-desc">Trained skills applied to naturalistic behavioral contexts through daily application missions and structured reinforcement challenges. Ohio Youth Scales mid-assessment at Week 12. Individual goal recalibration. Community engagement component activated, operationalizing the Collectiveness principle through structured peer accountability exercises.</div>
+      </div>
+      <div class="phase-tile">
+        <div class="pt-phase">Phase Four</div>
+        <div class="pt-name">Evaluation</div>
+        <div class="pt-weeks">Weeks 15–16</div>
+        <div class="pt-desc">Full post-assessment battery: BRIEF-2 (educator and parent), Ohio Youth Scales (youth, parent, worker), CEO EF Tracking Sheet 2.0 final administration. Individual outcome reports generated against pre-specified targets. Cohort-level report for district or partner agency. Transition planning. Program completion recognition structured around identity-level acknowledgment.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GRANT POSITIONING ═══════════════ -->
+<section class="grant-strip reveal" aria-labelledby="grant-h2">
+  <div class="grant-inner">
+    <div class="grant-content">
+      <span class="eyebrow">Research &amp; Funding Pathway</span>
+      <h2 class="section-h2-light" style="margin-bottom:1.25rem" id="grant-h2">Evidence-informed at present.<br><em>Evidence-based through controlled evaluation.</em></h2>
+      <p>The CEO Initiative is accurately described as evidence-informed: its design draws from established peer-reviewed research in cognitive behavioral therapy, executive functioning neuroscience, trauma-informed care, and identity development theory. It does not yet meet the criteria for evidence-based designation under federal standards such as those applied by the What Works Clearinghouse, because it has not been evaluated through a randomized controlled trial or quasi-experimental study design with an adequate comparison condition.</p>
+      <p>This is not a limitation to be obscured — it is the precise condition that SBIR Phase I funding is designed to address. The CEO Initiative is positioned at the transition point between evidence-informed and evidence-based: a manualized intervention with a specified theoretical model, a multi-instrument assessment battery, a committed deployment partner, and a defined pilot study design that will produce the pre-post outcome data required for a Phase II efficacy proposal.</p>
+      <p>Program officer consultations with NICHD and NIMH have been initiated. The Specific Aims document is prepared in both ED/IES and NIH formats. grid templates column"research.html">Full research positioning and SBIR pathway →</a></p>
+    </div>
+    <div>
+      <div class="grant-metrics">
+        <div class="gm-card"><div class="gm-value">$1.75M+</div><div class="gm-label">Pilot-stage grant potential</div></div>
+        <div class="gm-card"><div class="gm-value">Phase I</div><div class="gm-label">$275K–$350K per agency</div></div>
+        <div class="gm-card"><div class="gm-value">Phase II</div><div class="gm-label">$750K–$1.5M efficacy study</div></div>
+      </div>
+      <div style="margin-top:1.5rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:1.5rem">
+        <div style="font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;color:var(--cyan);text-transform:uppercase;margin-bottom:1rem">Active Grant Targets</div>
+        <div style="display:flex;flex-direction:column;gap:.75rem">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:.82rem;color:rgba(255,255,255,.55)">ED/IES SBIR Phase IB</span><span style="font-family:var(--mono);font-size:.7rem;color:var(--cyan)">▸ Primary</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:.82rem;color:rgba(255,255,255,.55)">NIH NICHD SBIR Phase I</span><span style="font-family:var(--mono);font-size:.7rem;color:var(--dgray)">▸ Secondary</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:.82rem;color:rgba(255,255,255,.55)">NIH NIMH SBIR Phase I</span><span style="font-family:var(--mono);font-size:.7rem;color:var(--dgray)">▸ Secondary</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section reveal" aria-labelledby="cta-h2">
+  <div class="cta-inner">
+    <span class="eyebrow">Institutional Engagement</span>
+    <h2 class="cta-h2" id="cta-h2">Documentation is available for institutional review.</h2>
+    <p class="cta-sub">The CEO Initiative Specific Aims document, assessment instrument specifications, program manual excerpt, preliminary data summary, and LMS technical architecture documentation are available upon request for institutional reviewers, grant program officers, district-level decision-makers, and clinical professionals evaluating the model for collaborative deployment.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      grid templates column"framework.html" class="btn-primary">Explore the Framework</a>
+      grid templates column"contact.html" class="btn-outline">Contact &amp; Inquiries</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="font-family:var(--mono);font-size:.85rem;color:rgba(255,255,255,.7);letter-spacing:.08em">CEO INITIATIVE</div>
+      <p>A behavioral operating system for executive functioning development and identity-based growth in schools, communities, and clinical settings.</p>
+      <div class="footer-cred">Lawrence Gardiner, MA, LIMHP<br>Founder, Centered Counseling Services, LLC<br>Lancaster County, Nebraska</div>
+    </div>
+    <div class="footer-col">
+      <h4>Framework</h4>
+      <ul>
+        <li>grid templates column"framework.html">The CEO Model</a></li>
+        <li>grid templates column"framework.html#skills">EF Skills Taxonomy</a></li>
+        <li>grid templates column"framework.html#principles">Six Principles</a></li>
+        <li>grid templates column"framework.html#identity">Identity Architecture</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Application</h4>
+      <ul>
+        <li>grid templates column"application.html#schools">Schools</a></li>
+        <li>grid templates column"application.html#community">Community</a></li>
+        <li>grid templates column"process.html">Program Process</a></li>
+        <li>grid templates column"research.html">Research &amp; Evidence</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Engage</h4>
+      <ul>
+        <li>grid templates column"about.html">About</a></li>
+        <li>grid templates column"contact.html">Contact</a></li>
+        <li>grid templates column"contact.html#partner">Partner Inquiry</a></li>
+        <li>grid templates column"contact.html#press">Press</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Centered Counseling Services, LLC — CEO Initiative</span>
+    <span style="font-family:var(--mono);color:rgba(255,255,255,.2);font-size:.7rem">"The Business of Me"</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.07,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  document.querySelectorAll('[data-stagger]').forEach(grid=>{
+    const po=new IntersectionObserver(es=>{if(es[0].isIntersecting){Array.from(grid.children).forEach((k,i)=>{k.style.transitionDelay=i*60+'ms';setTimeout(()=>k.classList.add('visible'),0)});po.disconnect()}},{threshold:.05});
+    Array.from(grid.children).forEach(k=>k.classList.add('reveal'));
+    po.observe(grid);
+  });
+})();
+</script>
+</body>
+</html>
